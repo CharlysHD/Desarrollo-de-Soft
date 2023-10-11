@@ -1,0 +1,513 @@
+{
+	"info": {
+		"_postman_id": "87a90d0d-de22-4785-8e9d-8567f946b6c7",
+		"name": "PersonaApiRequestConPaginacion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23646768"
+	},
+	"item": [
+		{
+			"name": "Persona",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/personas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"personas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/personas/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Carlos\",\r\n    \"apellido\": \"Gutierrez\",\r\n    \"dni\":37519249,\r\n    \"domicilio\":{\r\n        \"calle\":\"Dr.Moreno\",\r\n        \"numero\":5000,\r\n        \"localidad\":{\r\n           \"id\": 1,\r\n        \"denominacion\": \"Maipú\"\r\n            }\r\n    },\r\n        \"libros\":[\r\n        {\r\n            \"titulo\":\"Harry Potter\",\r\n            \"fecha\":\"1995\",\r\n            \"genero\":\"Novela\",\r\n            \"pagina\":256,\r\n            \"autores\":[\r\n                {\r\n                   \"id\": 1,\r\n                   \"nombre\": \"Joanne\",\r\n                   \"apellido\": \"Rowling\",\r\n                   \"biografia\": \"Nació el 31 de julio de 1965 en Yate (Reino Unido), hija de Peter James Rowling y Anne Rowling, cuyo apellido de soltera era Volant.​ Su hermana Dianne, Di, nació en el hogar familiar el 18 de junio de 1967 cuando Rowling tenía 23 meses de edad. La familia se mudó al pueblo cercano de Winterbourne cuando Rowling tenía 4 años. Asistió a la Escuela Primaria St Michael's,​ un establecimiento fundado por el famoso abolicionista William Wilberforce y por la activista Hannah More en 1813.\"\r\n                }\r\n                ]\r\n                 }\r\n                ]\r\n                }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/personas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"personas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Tomas\",\r\n    \"apellido\": \"Gutierrez\",\r\n    \"dni\":37519249,\r\n    \"domicilio\":{\r\n        \"calle\":\"Dr.Moreno\",\r\n        \"numero\":5000,\r\n        \"localidad\":{\r\n           \"id\": 1,\r\n        \"denominacion\": \"Guaymallén\"\r\n            }\r\n    },\r\n    \"libros\":[\r\n        {\r\n            \"titulo\":\"Harry Potter\",\r\n            \"fecha\":\"1995\",\r\n            \"genero\":\"Novela\",\r\n            \"pagina\":256,\r\n            \"autores\":[\r\n                {\r\n                   \"id\": 2,\r\n                   \"nombre\": \"Joanne\",\r\n                   \"apellido\": \"Rowling\",\r\n                   \"biografia\": \"Nació el 31 de julio de 1965 en Yate (Reino Unido), hija de Peter James Rowling y Anne Rowling, cuyo apellido de soltera era Volant.​ Su hermana Dianne, Di, nació en el hogar familiar el 18 de junio de 1967 cuando Rowling tenía 23 meses de edad. La familia se mudó al pueblo cercano de Winterbourne cuando Rowling tenía 4 años. Asistió a la Escuela Primaria St Michael's,​ un establecimiento fundado por el famoso abolicionista William Wilberforce y por la activista Hannah More en 1813.\"\r\n                }\r\n                ]\r\n                 }\r\n                ]\r\n                }\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/personas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/personas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/personas/search?filtro=a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"search"
+							],
+							"query": [
+								{
+									"key": "filtro",
+									"value": "a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll Paged",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/personas/paged?page=0&size=5&sort=id,asc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"paged"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "sort",
+									"value": "id,asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Paged",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/personas/searchPaged?filtro=Carlos&page=0&size=5&sort=id,desc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"searchPaged"
+							],
+							"query": [
+								{
+									"key": "filtro",
+									"value": "Carlos"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "sort",
+									"value": "id,desc"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Autores",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/autores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"autores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/autores/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"autores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n             \"nombre\": \"Liliana\",\r\n                   \"apellido\": \"Bodoc\",\r\n                   \"biografia\": \"Nació el 21 de julio de 1958 en la provincia de Santa Fe, y cuando tenía 6 años su familia se trasladó a Mendoza porque su padre iría a trabajar allí. Estudió Licenciatura en Letras en la Universidad Nacional de Cuyo y ejerció como docente de Literatura Española y Argentina en diversos colegios de la misma universidad​ a 30 kilómetros de la ciudad de San Luis, hasta su muerte producto de un paro cardíaco.\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/autores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"autores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n                   \"nombre\": \"Milena\",\r\n                   \"apellido\": \"Rowling\",\r\n                   \"biografia\": \"Nació el 31 de julio de 1965 en Yate (Reino Unido), hija de Peter James Rowling y Anne Rowling, cuyo apellido de soltera era Volant.​ Su hermana Dianne, Di, nació en el hogar familiar el 18 de junio de 1967 cuando Rowling tenía 23 meses de edad. La familia se mudó al pueblo cercano de Winterbourne cuando Rowling tenía 4 años. Asistió a la Escuela Primaria St Michael's,​ un establecimiento fundado por el famoso abolicionista William Wilberforce y por la activista Hannah More en 1813.\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/autores/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"autores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/autores/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"autores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Localidades",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/localidades",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"localidades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/localidades/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"localidades",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"denominacion\": \"Godoy Cruz\"\r\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/localidades",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"localidades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":2,\r\n    \"denominacion\": \"Guaymallen\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/localidades/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"localidades",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/localidades/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"localidades",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
