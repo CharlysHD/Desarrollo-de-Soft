@@ -1,14 +1,14 @@
 {
-  "name": "clase-20-09",
+  "name": "exercise-typescript-array-functions",
   "version": "1.0.0",
-  "description": "",
+  "description": "Exercise to work with array functions using TypeScript.",
   "main": "index.js",
   "scripts": {
     "build": "tsc ./index.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["TypeScript", "Bootstrap", "DOM"],
+  "author": "Agustin Cassani",
+  "license": "MIT",
   "devDependencies": {
     "typescript": "^5.2.2"
   }
